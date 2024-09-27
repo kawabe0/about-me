@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介</title>
-		<!-- reset.css ress -->
-		<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <title>お問い合わせ</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body">
     <header class="header">
         <div class="header-area">
-            <h1>ロゴ</h1>
+            <a href="index.html"><img class="logo" src="images/rogo.gif" alt="自分のロゴ"></a>
             <div class="hamburger">
-              <!-- ハンバーガーメニューの線 -->
-              <span></span>
-              <span></span>
-              <span></span>
-              <!-- /ハンバーガーメニューの線 -->
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div>
-          <ul class="slide-menu">
+        </div>
+        <ul class="slide-menu">
             <li><a href="index.html">TOPページ</a></li>
             <li><a href="about.html">自己紹介</a></li>
             <li><a href="contact.html">お問い合わせ</a></li>
-            <li><a href="">メニュー4</a></li>
-            <li><a href="">メニュー5</a></li>
-          </ul>
+            <li><a href="game.html">ゲーム</a></li>
+            <li><a href="pet.html">ペット</a></li>
+        </ul>
     </header>
-    <main>
-        
+    <main class="contact-main">
+        <h1>お問い合わせ</h1>
+        <form action="submit_form.php" method="post">
+            <div>
+                <label for="name">お名前:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div>
+                <button type="submit">送信</button>
+            </div>
+        </form>
     </main>
     <footer class="footer">
         <p>&copy; 2024 自己紹介サイト</p>
@@ -37,4 +51,3 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
-
